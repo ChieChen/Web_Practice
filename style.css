@@ -1,0 +1,271 @@
+
+/*h2 {color: red;}
+p {color: blue; font-size: 14px;}*/
+
+/*header, section, footer {
+background-color: #d6cccd;
+border:5px #9d8189 solid;
+padding: 30px 0 20px 50px; /*上 右 下 左*/ /* 30px 20px 50px = 上 左右 下 */ /* 30px 50px 上下 左右*/ /*30px 四邊
+margin: 30px;
+}*/
+
+header { /*背景黑*/
+    /*background-color: #231c1a;*/
+    background-color: rgba(35,28,26,0.8); /*背景設置半透明*/
+    height: 80px;
+    width: 100%; /*寬度與視窗同寬*/
+    position: fixed; /*固定, 會遮蔽空間*/
+    /*position: relative; left: 50px; top:100px; /*relative 相對, absolute 絕對*/
+    /*
+    relative 從子元素原來的位子開始計算
+    absolute 從版面(父元素)的左上角開始計算
+    */
+}
+
+h1 { /*h1 字白*/
+    position: absolute;
+    left: 120px; /*px 像素*/
+    top: 0;
+    line-height: 80px;
+    color: white;
+    background-image: url(images/Logo.svg); /*用背景語法載入圖檔, 才不會影響 h1 的搜尋從而影響網站排名*/
+    background-repeat: no-repeat; /*處理 logo 重複顯示的問題*/
+    background-position: center; /*把 logo 移到中央*/
+    width: 240px;
+    text-indent: -9999px; /*用文字縮排到很遠的地方, 這樣就可以達到搜尋引擎優化的目的*/
+}
+header ul {
+    position: absolute;
+    right: 5vw;
+    top:0;
+    line-height: 80px;
+}
+header li { /* li 從區塊元素轉換成行內元素*/
+    display: inline;    
+    margin-right: 4vw; /*增大右邊距 vw: 相對單位視窗寬部的 40% 當視窗因為不同大小時 vw 會也配合視窗寬度自動調整*/
+}
+
+header a { /*hearder 下的 a 字白, 不顯示超連結下底線*/
+    color: white;
+    text-decoration: none;
+}
+header a:hover { /*懸停語法, 游標指向連結時顯示下底線*/
+    text-decoration: underline;
+}
+
+/*我們就可以在這個 class 撰寫它專用的效果, 在 class 名稱前方要加上一個點*/
+.news {
+    background-color: antiquewhite;
+    color:white;
+    height: 95vh;
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*垂直對其*/
+    /*
+        background-size:auto 維持圖片原本大小
+        background-size:contain; 使圖片符合容器的寬度與高度, 可能會留下一些空白區塊
+        background-size:cover; 圖片會覆蓋整個容器, 可能會超過容器的邊界
+    */
+}
+.news h2 {
+    font-size: 60px;
+    margin-top: 60px;
+}
+.news p {
+    color: #fff7e6;
+    font-size: 18px;
+    margin: 25px 0;
+}
+.news a {
+    color:white;
+    text-decoration: none;
+    border: 1px solid #acacac; 
+    padding:10px 20px;
+    border-radius: 5px; /*為邊框加一點弧度效果*/
+}
+
+.slogan {
+    background-color: #485652;
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: center; /*水平*/
+    align-items: center; /*垂直*/
+    font-size: 20px;
+    line-height: 1.8em;
+
+}
+
+footer {
+    background-color: #000000;
+    color: #b7b7b7;
+    height: 60px;
+    display: flex;
+    justify-content: center; /*水平*/
+    align-items: center; /*垂直*/
+    font-size: 14px;
+}
+
+.shop {
+    display: flex;
+
+}
+
+.shop img {
+    width: 50%;
+}
+.info {
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.info p {
+text-align: center;
+line-height: 2em;
+
+}
+.product {
+    display: flex;
+    background-color: #ede9db;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 180px 80px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.product p {
+    font-size: 14px;
+    line-height: 1.6em;
+    
+}
+
+.product div {
+    width: 300px;
+    text-align: center;
+}
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.newsletter {
+    background-color: #485652;
+    color: white;
+    padding:60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter input, .newsletter button  {
+ background-color: transparent;
+ color: white;
+ border: 1px solid #949d9a;
+ padding: 10px;
+}
+
+.newsletter input  {
+    width: 200px;
+    margin-right: 15px;
+}
+.newsletter button {
+    width: 80px;
+    cursor: pointer; /*滑鼠移到連結上方時變成手指形狀*/
+
+}
+input::placeholder {
+    color: #DDDDDD;
+}
+input:focus {
+    outline:none; /*outline 移除黑框*/
+    border-color: #E0E9A3; /*可以以此更換自己喜歡的色彩*/
+}
+
+
+/*CSS 佈局中的重要的三個屬性:
+1. border 邊框
+2. padding 內邊距 (內容與邊框的空隙大小)
+3. margin 外邊距 (控制不同網頁元素的距離)
+
+*/
+
+* { /*此為重設語法, 將內外邊距設置為0*/
+padding: 0;
+margin:0;
+}
+
+.menu {
+    display:none;
+}
+
+/*響應式設計*/
+@media screen and (max-width: 768px) {
+    header ul {
+        display:none;
+    }
+    header h1 {
+        left: 50%;
+        transform:translateX(-50%);
+    }
+    header h2 {
+        font-size: 40px;
+    }
+    .menu {
+        display: block; /*顯示為區塊元素*/
+        background-color: transparent;
+        color: white;
+        font-size:35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .shop {
+        flex-direction: column;
+    }
+    .shop img {
+        width: 100%;
+    }
+    .info {
+        width: 100%;
+
+    }
+    .indo p {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .indo h2 {
+        font-size:30px;
+    }
+
+    .product {
+        flex-direction: column;
+        padding:60px 0;
+    }
+
+    .product div {
+        margin-bottom: 30px;
+    }
+
+}

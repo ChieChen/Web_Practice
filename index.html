@@ -1,0 +1,119 @@
+<!--輸入 ! 號, 再按 Tab 鍵, VS Code 就會自動完成這些代碼-->
+
+<!DOCTYPE html> <!--文件類型的宣告-->
+<html lang="en"> <!--開始標籤--> <!--lang 網頁主要使用的語言-->
+<head> <!--頭部, 不會檢視在網頁中, 主要是後臺資料, 文件編碼, 程式腳本等-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device">
+    <title>Document</title> <!--顯示在標籤的網頁名稱-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <!--身體, 圖片, 文字, 網頁內容...等-->
+<header> <!--標題-->
+    <button class="menu">&#9776;</button>
+    <h1>烘焙工坊</h1> <!--標題--><!--區塊元素-->
+    <nav> <!--按鈕-->
+    <ul>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">門市據點</a></li>
+        <li><a href="#">會員專區</a></li>       
+    </ul>
+    </nav>
+</header>
+    <main><!--網頁主要內容-->
+        
+    <!--<p><strong>123</strong></p> <!--獨立段落--><!--區塊元素--><!--strong 粗體-->
+    <!--<p><em>123</em></p> <!--獨立段落--><!--區塊元素--><!--em 斜體-->
+    <!--<p></p><a href="#.html"></a></body> <!--超連結-->
+ 
+<section class="news"> <!--class 分組-->
+    <h2>健康穀物麵包新鮮出爐!</h2>
+    <p>亞麻的細語、葵花的微風，每一口都是自然的故事</p>
+    <p><a href="#">瞭解更多</a></p>
+</section>
+<section class="slogan"> <!--class 分組-->    
+<blockquote>" 嚴選天然的食材，精湛匠心烘焙，<br> 讓幸福在每口麵包中的香氣中瀰漫 " </blockquote>
+</section>    
+
+<!--div 可以用來劃分/組織 html 的元素-->
+<section class="shop"> 
+    <img src="images/Shop.png" alt="烘焙工坊大安店"> 
+    <div class="info">
+    <h2>8月1日大安旗艦店隆重開幕</h2>
+    <p>享受花園庭院的悠閒時光，內用座位區美食相伴<br>
+    即日起來店消費加 LINE 好友可獲精緻小點心，等您一同品味！</p>
+    </div>
+</section> 
+
+<section class="product">
+    <div>
+        <img src="images/p1.png" alt="巴黎風法果吐司">
+        <h3>巴黎風法果吐司</h3>
+        <p>外皮黃金酥脆，讓您體驗法式浪漫</p>
+    </div>
+    <div>
+        <img src="images/p2.png" alt="巴黎風法果吐司">
+        <h3>巴黎風法果吐司</h3>
+        <p>外皮黃金酥脆，讓您體驗法式浪漫</p>
+    </div>
+    <div>
+        <img src="images/p1.png" alt="巴黎風法果吐司">
+        <h3>巴黎風法果吐司</h3>
+        <p>外皮黃金酥脆，讓您體驗法式浪漫</p>
+    </div>    
+</section>
+
+<section class="newsletter">
+    <p>歡迎訂閱烘焙工坊電子報</p>
+    <form>
+        <input type="email" placeholder="請輸入您的 Emaol" required>
+        <button type="submit">送出</button>
+    </form>
+
+</section>
+
+
+    <ol>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+    </ol>
+</section>
+</main>
+
+
+    <!--<section><將標籤做個分類
+        <h2>Hello HTML</h2> <!--標題--><!--區塊元素
+    </section>
+    <section>
+        <h3>Hello HTML</h3> <!--標題--><!--區塊元素
+    </section>
+    <section>
+        <h4>Hello HTML</h4> <!--標題--><!--區塊元素
+    </section>
+    <section>
+        <h5>Hello HTML</h5> <!--標題--><!--區塊元素
+    </section>
+    <section>
+        <h6>Hello HTML</h6> <!--標題--><!--區塊元素
+    </section>-->
+
+ 
+    <!--引入他人文字-->
+    <!--<blockquote cite="index.html">鹽選天然石材</blockquote><!--cite 用於標示引用的來源網址-->
+    <!--<br><!--斷行-->
+    <!--<img src="images/arrow3.png" alt="回到最上方"><!--img 插入圖片, src 圖片網址/路徑, alt 圖片無法正常顯示時顯示文字 -->
+    <!--img 是屬於區塊文素, 預設情況下也會佔據網頁一整行空間-->
+
+    <!--CSS 主要有三種方式來發揮作用
+    1. 直接將語法寫入 html 標籤內 <h1 style="font-size:24"></h1>
+    2. 統一將 css 語法寫入 head 內
+    3. 將 CSS 語法另外獨立出來, 成為一個樣式表 <link rel="stylesheet" href="style.css">
+    -->
+
+<footer><!--頁尾-->
+    <p>版權 @ xxxxxxxx</p>
+</footer>
+</body>
+
+</html> <!--結束標籤-->
